@@ -25,11 +25,16 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::delete('/logout', [LoginController::class, 'destory']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
+
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('show_post');
-Route::get('/post/{slug}/edit', [PostController::class, 'edit']);
-Route::patch('/post/{slug}', [PostController::class, 'update']);
-Route::delete('/post/{slug}', [PostController::class, 'destory']);
-Route::post('/comment/post/{slug}', [CommentController::class, 'store']);
+Route::middleware(['auth'])->group(function () {
+
+
+    Route::get('/post/{slug}/edit', [PostController::class, 'edit']);
+    Route::patch('/post/{slug}', [PostController::class, 'update']);
+    Route::delete('/post/{slug}', [PostController::class, 'destory']);
+    Route::post('/comment/post/{slug}', [CommentController::class, 'store']);
+});
 
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin', [PostController::class, 'index']);

@@ -43,7 +43,7 @@ class PostController extends Controller
 
     public function store()
     {
-
+// dd(request());
         // $post = Arr::first($posts, fn($posts) => $posts['slug'] === $slug);
 
         $validated = request()->validate([

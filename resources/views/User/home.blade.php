@@ -13,7 +13,7 @@
                     src="https://flowbite.com/docs/images/blog/image-4.jpg" alt="{{ $post->title }}">
                 --}}
 
-                <div class="p-6">
+                <div class="p-6 overflow-auto">
                     <h5 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                         {{ $post->title }}
                     </h5>
@@ -45,6 +45,8 @@
                             </form>
                         </div>
                     @endif
+                            <span>
+                    Total comment  =  <b>{{$post->comments->count() }}  </b></span>
                 </div>
             </div>
               </a>
