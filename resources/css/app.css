@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.section{
+    /* background: url(../../public/home-banner-free-img.jpg); */
+    display: block;
+    background-size: cover;
+
+}
+.overlay
+{
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 100%;
+}
