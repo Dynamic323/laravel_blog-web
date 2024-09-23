@@ -1,4 +1,3 @@
-<section class="hero">
 <div class=" h-[55svh]  w-[100%]  sm:mx-1 flex items-center justify-center ">
     <div class=" gap-80 text-center text-slate-50">
         <h1 class="text-4xl lg:text-7xl font-serif font-bold md:text-5xl ">Wanderlust Travel Blog</h1>
@@ -20,5 +19,3 @@
         </p>
     </div>
 </div>
-
-</section>
