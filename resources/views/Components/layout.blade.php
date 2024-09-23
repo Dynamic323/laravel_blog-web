@@ -9,7 +9,7 @@
 </head>
 
 <body class="overflow-x-hidden">
-    <section class="section bg-fixed bg-[url(../../public/home-banner-free-img.jpg)] ">
+    <section class="section bg-fixed  ">
         <div class="overlay pb-12">
             <x-navbar />
             {{ $slot }}
