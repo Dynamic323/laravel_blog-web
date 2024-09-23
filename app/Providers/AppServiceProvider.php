@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use App\Views\Components\hero;
+use App\View\Components\Hero;
 
 class AppServiceProvider extends ServiceProvider
 {
