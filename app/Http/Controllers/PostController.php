@@ -24,11 +24,11 @@ class PostController extends Controller
             ->with(['comments'])
             ->first();
 
-            $comments = $post->comments()->paginate(6); // 5 comments per page
+        $comments = $post->comments()->paginate(6); // 5 comments per page
         if (!$post) {
             abort(403);
         }
-        return view('Post.show', compact('post', 'comments' ));
+        return view('Post.show', compact('post', 'comments'));
     }
 
     public function edit($slug)
@@ -43,7 +43,7 @@ class PostController extends Controller
 
     public function store()
     {
-// dd(request());
+        // dd(request());
         // $post = Arr::first($posts, fn($posts) => $posts['slug'] === $slug);
 
         $validated = request()->validate([
